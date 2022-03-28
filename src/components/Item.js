@@ -1,7 +1,6 @@
 import "../styles/Item.css";
 
-import rightArrow from "../images/right-arrow.png";
-import leftArrow from "../images/left-arrow.jpg";
+import Arrows from "./item-components/Arrows";
 
 const Item = (props) => {
     return (
@@ -9,11 +8,7 @@ const Item = (props) => {
             <img src={props.img} alt=""/>
             <h1>{props.name}</h1>
             <p>${props.price}</p>
-            <div className="arrows">
-                <img src={leftArrow} alt=""/>
-                <div className="count">{props.count}</div>
-                <img src={rightArrow} id={props.id} onClick={props.increase} alt=""/>
-            </div>
+            <Arrows count={props.count} id={props.id} increase={props.increase} />
         </div>
     );
 };
