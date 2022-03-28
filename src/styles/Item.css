@@ -1,0 +1,38 @@
+.item {
+  display: grid;
+  gap: 10px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px;
+}
+.item img {
+  width: 100%;
+}
+.item h1 {
+  justify-self: center;
+  margin: 0;
+}
+.item p {
+  justify-self: center;
+  margin: 0;
+}
+.item .arrows {
+  display: grid;
+  grid-template-columns: repeat(3, 30px);
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+}
+.item .arrows img {
+  width: 30px;
+  cursor: pointer;
+}
+.item .arrows .count {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+/*# sourceMappingURL=Item.css.map */
