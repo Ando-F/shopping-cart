@@ -1,8 +1,12 @@
+import "../styles/Header.css";
+
 const Header = (props) => {
     return (
-        <div>
+        <div id="header">
             <h1>{props.pageName}</h1>
-            <button>Cart</button>
+            <div id="button-container">
+                <button>Cart</button>
+            </div>
         </div>
     );
 };
