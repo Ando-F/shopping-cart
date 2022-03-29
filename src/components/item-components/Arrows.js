@@ -6,7 +6,7 @@ const Arrows = (props) => {
         <div className="arrows">
             <img src={leftArrow} alt=""/>
             <div className="count">{props.count}</div>
-            <img src={rightArrow} id={props.id} onClick={props.increase} alt=""/>
+            <img src={rightArrow} className={props.class} onClick={props.increase} alt=""/>
         </div>
     );
 };

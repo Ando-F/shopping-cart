@@ -7,7 +7,8 @@
   padding: 10px;
 }
 .item img {
-  width: 100%;
+  width: 200px;
+  height: 150px;
 }
 .item h1 {
   justify-self: center;
@@ -16,6 +17,10 @@
 .item p {
   justify-self: center;
   margin: 0;
+}
+.item .add-to-cart {
+  display: grid;
+  justify-content: center;
 }
 .item .arrows {
   display: grid;

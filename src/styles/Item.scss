@@ -8,7 +8,8 @@
   padding: 10px;
 
   img {
-    width: 100%;
+    width: 200px;
+    height: 150px;
   }
 
   h1 {
@@ -19,6 +20,11 @@
   p {
     justify-self: center;
     margin: 0;
+  }
+
+  .add-to-cart {
+    display: grid;
+    justify-content: center;
   }
 
   .arrows {

@@ -1,5 +1,7 @@
 import {useState} from "react";
 
+import "../styles/MainShop.css";
+
 import Item from "./Item";
 import {apple, banana} from "./Images";
 
@@ -20,13 +22,13 @@ const MainShop = () => {
     })
 
     const increaseCount = (e) => {
-        let id = e.target.id;
-        let quantity = items[id].quantity;
+        let className = e.target.className;
+        let quantity = items[className].quantity;
         quantity += 1;
         setItems(prevState => ({
             ...items,
-            [id]: {
-                ...prevState[id],
+            [className]: {
+                ...prevState[className],
                 quantity: quantity,
             }
         }))
@@ -35,8 +37,8 @@ const MainShop = () => {
 
     return (
         <div id="main-shop">
-            <h1>Main Shop Page</h1>
-            <Item id={0} img={items[0].img} name={items[0].name} price={items[0].price} count={items[0].quantity} increase={increaseCount}/>
+            <Item class={0} img={items[0].img} name={items[0].name} price={items[0].price} count={items[0].quantity} increase={increaseCount}/>
+            <Item class={1} img={items[1].img} name={items[1].name} price={items[1].price} count={items[1].quantity} increase={increaseCount}/>
         </div>
     );
 };
