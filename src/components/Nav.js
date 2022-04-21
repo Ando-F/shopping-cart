@@ -3,14 +3,12 @@ import "../styles/Nav.css";
 
 const Nav = () => {
     return (
-        <div id="nav">
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/shoppage">Shop</Link></li>
-                </ul>
-            </nav>
-        </div>
+        <nav id="nav">
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/shop">Shop</Link></li>
+            </ul>
+        </nav>
     );
 };
 
