@@ -1,44 +1,59 @@
 import {useState} from "react";
+import uniqid from 'uniqid';
 
 import "../styles/MainShop.css";
+import apple from '../images/iu.png';
+import banana from '../images/iu-2.png';
 
 import Item from "./Item";
-import {apple, banana} from "./Images";
 
 const MainShop = () => {
-    const [items, setItems] = useState({
-        0: {
+    const [items, setItems] = useState([
+        {
+            id: 1,
+            uniqid: uniqid(),
             img: apple,
             name: 'Apple',
             price: 10,
             quantity: 0
         },
-        1: {
+        {
+            id: 2,
+            uniqid: uniqid(),
             img: banana,
             name: 'Banana',
             price: 15,
             quantity: 0
         }
-    })
+    ])
 
     const increaseCount = (e) => {
-        let className = e.target.className;
-        let quantity = items[className].quantity;
-        quantity += 1;
-        setItems(prevState => ({
-            ...items,
-            [className]: {
-                ...prevState[className],
-                quantity: quantity,
-            }
-        }))
-        console.log(items);
+        const id = Number(e.target.id) - 1;
+        const newItems = [...items];
+        newItems[id].quantity += 1;
+        setItems(newItems);
+    }
+
+    const decreaseCount = (e) => {
+        const id = Number(e.target.id) - 1;
+        const newItems = [...items];
+        if (newItems[id].quantity > 0) {
+            newItems[id].quantity -= 1;
+        }
+        setItems(newItems);
+    }
+
+    const listOfItems = () => {
+        return items.map(item => {
+            return (
+                <Item key={item.id} item={item} increase={increaseCount} decrease={decreaseCount}/>
+            )
+        })
     }
 
     return (
         <div id="main-shop">
-            <Item class={0} img={items[0].img} name={items[0].name} price={items[0].price} count={items[0].quantity} increase={increaseCount}/>
-            <Item class={1} img={items[1].img} name={items[1].name} price={items[1].price} count={items[1].quantity} increase={increaseCount}/>
+            {listOfItems()}
         </div>
     );
 };

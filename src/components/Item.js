@@ -1,23 +1,24 @@
 import "../styles/Item.css";
+import leftArrow from "../images/left-arrow.jpg";
+import rightArrow from "../images/right-arrow.png";
 
-import Arrows from "./item-components/Arrows";
-import Button from "./item-components/Button";
-import {useState} from "react";
-
-const Item = (props) => {
-    const [buttonStatus, setButtonStatus] = useState(false);
-
-    const changeButtonStatus = () => {
-        setButtonStatus(true);
-    }
+const Item = ({item, increase, decrease}) => {
     return (
         <div className="item">
-            <img src={props.img} alt=""/>
-            <h1>{props.name}</h1>
-            <p>${props.price}</p>
-            {(buttonStatus === false) ? <Button checkStatus={changeButtonStatus} increase={props.increase} class={props.class}/> :
-                <Arrows count={props.count} class={props.class} increase={props.increase} />}
-
+            <img className="item__good-image" src={item.img} alt=""/>
+            <h1>{item.name}</h1>
+            <p>$ {item.price}</p>
+            {(item.quantity <= 0) ?
+                <div className="add-to-cart">
+                    <button id={item.id} onClick={increase}>Add to card</button>
+                </div>
+                :
+                <div className="arrows">
+                    <img src={leftArrow} id={item.id} alt="" onClick={decrease}/>
+                    <div className="count">{item.quantity}</div>
+                    <img src={rightArrow} id={item.id} alt="" onClick={increase} />
+                </div>
+            }
         </div>
     );
 };
