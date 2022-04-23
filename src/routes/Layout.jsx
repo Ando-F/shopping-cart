@@ -7,7 +7,7 @@ import Header from "../components/Header";
 const Layout = () => {
     return (
         <div>
-            <Header pageName={'Shop'}/>
+            <Header pageName={'My Shop'}/>
             <Nav />
             <Outlet />
         </div>
