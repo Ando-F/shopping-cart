@@ -1,0 +1,20 @@
+.arrows {
+  display: grid;
+  grid-template-columns: repeat(3, 30px);
+  justify-content: center;
+
+  height: 30px;
+
+  img {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .count {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+  }
+}

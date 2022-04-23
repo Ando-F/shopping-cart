@@ -22,22 +22,5 @@
   display: grid;
   justify-content: center;
 }
-.item .arrows {
-  display: grid;
-  grid-template-columns: repeat(3, 30px);
-  justify-content: center;
-  width: 100%;
-  height: 30px;
-}
-.item .arrows img {
-  width: 30px;
-  cursor: pointer;
-}
-.item .arrows .count {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-}
 
 /*# sourceMappingURL=Item.css.map */

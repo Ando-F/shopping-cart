@@ -1,0 +1,22 @@
+.cart-item {
+  border-radius: 5px;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.cart-item__title {
+  margin: 0;
+  font-size: 20px;
+}
+.cart-item__price {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.cart-item__price * {
+  margin: 0;
+}
+
+/*# sourceMappingURL=CartItem.css.map */

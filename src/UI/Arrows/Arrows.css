@@ -1,0 +1,18 @@
+.arrows {
+  display: grid;
+  grid-template-columns: repeat(3, 30px);
+  justify-content: center;
+  height: 30px;
+}
+.arrows img {
+  width: 30px;
+  cursor: pointer;
+}
+.arrows .count {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+/*# sourceMappingURL=Arrows.css.map */

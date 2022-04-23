@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import MainShop from "../components/MainShop";
+import MainShop from "../components/shop/MainShop";
 import MainHome from "../components/MainHome";
 
 const RouteSwitch = () => {

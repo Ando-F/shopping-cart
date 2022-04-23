@@ -1,9 +1,9 @@
 import React from "react";
 import {useSelector} from "react-redux";
 
-import "../styles/MainShop.css";
+import "../../styles/MainShop.css";
 
-import Item from "./Item";
+import Item from "../Item";
 
 const MainShop = () => {
     const items = useSelector((state) => state.items.value);
